@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+nav .nav-links li {
+    margin: 0 20px;
+}
+
+nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+#home,
+#about,
+#contact {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#home,
+#about {
+    line-height: 2;
+}
+
+#contact{
+    line-height: 1.5;
+}
+
+#home a {
+    text-decoration: none;
+    color: black;
+}
+
+#home h1,
+#about h1,
+#contact h1 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#contact p{
+    margin-bottom: 15px;
+}
+
+#contact form {
+    display: grid;
+    gap: 15px;
+}
+
+#about h3{
+    color: #333;
+    font-size: 24px;
+}
+
+#about ul li{
+    color: #333;
+    list-style-position: inside;
+}
+
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    bottom: 0;
+    position: fixed;
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 20px 0;
+        z-index: 1;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
+
+    nav .nav-links li a {
+        font-size: 20px;
+        padding: 12px 30px;
+    }
+}
